@@ -1,0 +1,42 @@
+algoritmo "Grade Escolar"
+
+var
+ Departamento: caractere
+ Unidade: caractere
+ Curso: caractere
+
+inicio
+ escreval ("Informe seu Departamento:")
+ leia(Departamento)
+   escolha (Departamento)
+     caso "Tecnologia"
+       escreval("Em qual das seguintes Unidades? [Suzano ou Itaquera]:")
+       leia(Unidade)
+         escolha (Unidade)
+            caso "Suzano"
+              escreval("Qual curso frequenta? [Logica, Programação ou Mobile]: ")
+              leia (Curso)
+              escolha (Curso)
+                caso "Logica"
+                 escreval("Aula Terça")
+                caso "Programação"
+                  escreval("Aula Quinta")
+               outrocaso
+                escreval ("Aula não informada...")
+              fimescolha
+            caso "Itaquera"
+              escreval("Qual curso frequenta? [Logica, Programação ou Mobile]: ")
+              leia (Curso)
+               escolha (Curso)
+                 caso "Mobile"
+                 escreval("Aula Sexta")
+                 outrocaso
+                  escreval("Aula não informada...")
+               fimescolha
+           outrocaso
+             escreval("Unidade não encontrada...")
+         fimescolha
+     outrocaso
+       escreval("Departamento não existe...")
+    fimescolha
+fimalgoritmo
