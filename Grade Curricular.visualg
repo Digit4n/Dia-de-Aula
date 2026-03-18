@@ -1,0 +1,46 @@
+algoritmo "Dia de Aula"
+
+var
+ Departamento:caractere
+ Unidade:caractere
+ Curso:caractere
+ condicao:logico
+ condicao2:logico
+ condicao3:logico
+
+inicio
+ escreval("Qual Departamento se encontra inserido?" , Departamento,) 
+ escreval("disponiveis: Tecnologia")
+   leia(Departamento)
+ escreval("Em qual Unidade de ", Departamento , " " "Unidades de ", Departamento ,) 
+ escreval("disponiveis: Suzano e Itaquera. ")
+   leia(Unidade)
+      se(Unidade = "Suzano") entao
+         escreval("Qual Curso de ", Departamento , " " "esta estudando em ",  Unidade,)
+         escreval("cursos disponiveis: Logica e Programação. ")
+           leia(Curso)
+         senao
+         escreval("Qual Curso de ", Departamento , " " "esta estudando em " ,  Unidade ,)
+         escreval("cursos disponiveis: Mobile. ")
+            leia(Curso)
+      fimse
+ 
+ condicao <- (Departamento = "Tecnologia" e Unidade = "Suzano" e Curso = "logica")
+ condicao2 <- (Departamento = "Tecnologia" e Unidade = "Suzano" e Curso = "Programação")
+ condicao3 <- (Departamento = "Tecnologia" e Unidade = "Itaquera" e Curso = "Mobile")
+
+  se(condicao)entao
+     escreval("Aula Terça")
+      senao
+        se(condicao2)entao
+          escreval("Aula Quinta")
+            senao
+              se(condicao3)entao
+                escreval("Aula Sexta")
+                  senao
+                    escreval ("Dia de aula não informado...")
+               fimse
+         fimse
+   fimse
+
+fimalgoritmo
